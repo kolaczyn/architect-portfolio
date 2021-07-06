@@ -7,4 +7,6 @@ html, body {
 
   @apply text-black;
   @apply bg-white;
+
+  scroll-behavior: smooth;
 }

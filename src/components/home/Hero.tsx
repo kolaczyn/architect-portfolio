@@ -1,5 +1,7 @@
+import classNames from 'classnames';
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
+import useHideScrollIndicator from '../../hooks/useHideScrollIndicator';
 import ContainerSmall from '../container/ContainerSmall';
 import Button from '../ui/Button';
 import ScrollDownIndicator from '../ui/ScrollDownIndicator';
@@ -21,7 +23,10 @@ const Hero: React.FC<Props> = ({}) => {
     }
   `);
   const { title, subtitle, backgroundImage } = contentfulHero;
+  const shouldHideScrollIndicator = useHideScrollIndicator();
   const bgImgSrc = backgroundImage.fluid.src;
+
+  const scrollPastHero = () => window.scrollTo(0, window.innerHeight);
   return (
     <div className="min-h-screen">
       <div
@@ -40,7 +45,13 @@ const Hero: React.FC<Props> = ({}) => {
             </div>
           </div>
         </ContainerSmall>
-        <ScrollDownIndicator className="text-white transform -translate-x-1/2 left-1/2 absolute bottom-4" />
+        <ScrollDownIndicator
+          handleClick={scrollPastHero}
+          isHidden={shouldHideScrollIndicator}
+          className={classNames(
+            'text-white transform -translate-x-1/2 left-1/2 absolute bottom-4'
+          )}
+        />
       </div>
     </div>
   );
