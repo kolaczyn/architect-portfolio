@@ -4,30 +4,27 @@ import React from 'react';
 import { BaseProps } from '../../customTypes';
 import ContainerBig from '../container/ContainerBig';
 import Logo from '../ui/Logo';
+import AppBox from './AppBox';
 
 type Props = BaseProps;
 
 const Navbar: React.FC<Props> = ({ className, ...rest }) => {
   const links = ['O Mnie', 'Projekty', 'Kontakt'];
   return (
-    <ContainerBig
-      className={classNames(
-        'flex justify-between bg-black opacity-85 text-white',
-        className
-      )}
-      {...rest}
-    >
-      <Logo />
-      <nav>
-        <ul className="flex space-x-4">
-          {links.map(link => (
-            <li key={link}>
-              <Link to="/">{link}</Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </ContainerBig>
+    <AppBox className={className} {...rest}>
+      <ContainerBig className={classNames('flex justify-between items-center')}>
+        <Logo />
+        <nav className="font-bold">
+          <ul className="flex space-x-6">
+            {links.map(link => (
+              <li key={link}>
+                <Link to="/">{link}</Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </ContainerBig>
+    </AppBox>
   );
 };
 export default Navbar;

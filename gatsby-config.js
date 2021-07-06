@@ -12,6 +12,15 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        fonts: [
+          'Lato\:400 700',
+          'Alegreya\:700'
+        ]
+      }
+    },
+    {
       resolve: 'gatsby-source-contentful',
       options: {
         accessToken: contentfulAccessToken,
