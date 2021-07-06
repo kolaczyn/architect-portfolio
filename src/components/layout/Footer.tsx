@@ -11,8 +11,14 @@ const Footer: React.FC<Props> = ({ className, ...rest }) => {
     <AppBox className={className} {...rest}>
       <footer className="font-bold">
         <ContainerBig className="flex justify-around">
-          <span>created by kolaczyn</span>
-          <span>kolaczyn.com</span>
+          <span>Paweł Kołaczyński © {new Date().getFullYear()}</span>
+          <a
+            href="https://kolaczyn.com"
+            target="_blank"
+            className="hover:underline"
+          >
+            www.kolaczyn.com
+          </a>
         </ContainerBig>
       </footer>
     </AppBox>
