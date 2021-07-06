@@ -4,4 +4,7 @@
 
 html, body {
   @apply text-lg;
+
+  @apply text-black;
+  @apply bg-white;
 }

@@ -14,6 +14,7 @@ module.exports = {
         'dark-gray': '#363640',
         black: '#07070A',
         primary: '#42689C',
+        'primary-dark': '#355068',
       },
       opacity: {
         85: '.85',
