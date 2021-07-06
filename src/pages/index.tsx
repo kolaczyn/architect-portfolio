@@ -1,26 +1,22 @@
 import * as React from 'react';
-import {Helmet} from 'react-helmet'
+import { Helmet } from 'react-helmet';
 import GeneralLayout from '../components/layout/GeneralLayout';
 import ContainerSmall from '../components/container/ContainerSmall';
-import ScrollDownIndicator from '../components/ui/ScrollDownIndicator';
-import Button from '../components/ui/Button';
+import Hero from '../components/home/Hero';
+import AboutMe from '../components/home/AboutMe';
+import Projects from '../components/home/Projects';
 
 const IndexPage = () => {
   return (
     <>
-    <Helmet>
-      <title>Marta Krawczyk</title>
-    </Helmet>
-    <GeneralLayout>
-      <ContainerSmall>
-        <h1>hello world</h1>
-        <div className="space-x-4">
-          <Button primary>Primary</Button>
-          <Button>Secondary</Button>
-        </div>
-        <ScrollDownIndicator />
-      </ContainerSmall>
-    </GeneralLayout>
+      <Helmet>
+        <title>Marta Krawczyk</title>
+      </Helmet>
+      <GeneralLayout>
+        <Hero />
+        <AboutMe />
+        <Projects />
+      </GeneralLayout>
     </>
   );
 };

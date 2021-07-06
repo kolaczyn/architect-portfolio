@@ -6,7 +6,7 @@ type Props = BaseProps;
 
 const AppBox: React.FC<Props> = ({ className, children, ...rest }) => {
   return (
-    <div className={classNames('bg-black opacity-85 text-white py-3')} {...rest}>
+    <div className={classNames('bg-black opacity-85 text-white py-3', className)} {...rest}>
       {children}
     </div>
   );

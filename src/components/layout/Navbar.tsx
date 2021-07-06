@@ -11,7 +11,7 @@ type Props = BaseProps;
 const Navbar: React.FC<Props> = ({ className, ...rest }) => {
   const links = ['O Mnie', 'Projekty', 'Kontakt'];
   return (
-    <AppBox className={className} {...rest}>
+    <AppBox className={classNames(className, 'z-10')} {...rest}>
       <ContainerBig className={classNames('flex justify-between items-center')}>
         <Logo />
         <nav className="font-bold">

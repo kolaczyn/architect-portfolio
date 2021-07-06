@@ -19,7 +19,7 @@ const Button: React.FC<Props> = ({
         'transition transform hover:scale-105 duration-500 ease-out',
         isPrimary
           ? 'bg-primary text-white hover:bg-primary-dark'
-          : 'bg-white text-primary hover:text-primary-dark',
+          : 'bg-transparent text-primary hover:text-primary-dark',
         className
       )}
       {...rest}

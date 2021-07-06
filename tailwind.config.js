@@ -3,8 +3,8 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      'sans': 'Lato',
-      'serif': 'Alegreya'
+      sans: 'Lato',
+      serif: 'Alegreya',
     },
     extend: {
       colors: {
