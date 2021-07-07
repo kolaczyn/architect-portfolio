@@ -31,7 +31,7 @@ const Projects: React.FC<Props> = ({}) => {
             <Button>Zobacz Wszystkie</Button>
           </div>
         </header>
-        <ul className="grid grid-cols-3 gap-8">
+        <ul className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
           {photos.map(({ title, fluid, id }) => (
             <li key={id}>
               <ProjectPreview

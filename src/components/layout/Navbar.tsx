@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import {GiHamburgerMenu as HamburgerIcon} from 'react-icons/gi'
 import { Link } from 'gatsby';
 import React from 'react';
 import { BaseProps } from '../../customTypes';
@@ -14,7 +15,8 @@ const Navbar: React.FC<Props> = ({ className, ...rest }) => {
     <AppBox className={classNames(className, 'z-10')} {...rest}>
       <ContainerBig className={classNames('flex justify-between items-center')}>
         <Logo />
-        <nav className="font-bold">
+        <HamburgerIcon className="block md:hidden" />
+        <nav className="hidden md:block font-bold">
           <ul className="flex space-x-6">
             {links.map(link => (
               <li key={link}>

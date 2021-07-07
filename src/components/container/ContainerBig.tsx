@@ -6,7 +6,7 @@ type Props = BaseProps;
 
 const ContainerBig: React.FC<Props> = ({ children, className, ...rest }) => {
   return (
-    <div className={classNames('px-8', className)} {...rest}>
+    <div className={classNames('px-4 sm:px-8', className)} {...rest}>
       {children}
     </div>
   );

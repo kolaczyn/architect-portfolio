@@ -1,12 +1,14 @@
-import React from 'react'
+import classNames from 'classnames';
+import React from 'react';
+import { BaseProps } from '../../customTypes';
 
 type Props = {
-  src: string
-}
+  src: string;
+} & BaseProps;
 
-const Avatar: React.FC<Props> = ({src}) => {
-    return (
-      <img className="rounded-full shadow" src={src}/>
-    );
-}
-export default Avatar
+const Avatar: React.FC<Props> = ({ src, className }) => {
+  return (
+    <img className={classNames('rounded-full shadow', className)} src={src} />
+  );
+};
+export default Avatar;

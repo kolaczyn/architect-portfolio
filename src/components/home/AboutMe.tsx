@@ -38,9 +38,9 @@ const AboutMe: React.FC<Props> = ({}) => {
 
   return (
     <ContainerSmall>
-      <div className="grid grid-cols-3 space-x-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 space-x-0 md:space-x-8">
         <div className="flex flex-col space-y-4">
-          <Avatar src={avatarSrc} />
+          <Avatar className="self-center" src={avatarSrc} />
           <LocationPin className="self-center" location={location} />
         </div>
         <section className="col-span-2 space-y-4">
