@@ -1,8 +1,8 @@
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 import React from 'react';
 import ContainerBig from '../container/ContainerBig';
 import GrayContainer from '../container/GrayContainer';
-import Button from '../ui/Button';
+import ButtonStyle from '../ui/ButtonStyle';
 import ProjectPreview from '../ui/ProjectPreview';
 
 type Props = {};
@@ -27,7 +27,9 @@ const Projects: React.FC<Props> = ({}) => {
         <header className="mb-8">
           <div className="flex flex-col items-center space-y-4">
             <h2 className="text-center">Moje Projekty</h2>
-            <Button>Zobacz Wszystkie</Button>
+            <Link to="/projekty">
+              <ButtonStyle>Zobacz Wszystkie</ButtonStyle>
+            </Link>
           </div>
         </header>
         <ul className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">

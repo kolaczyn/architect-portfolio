@@ -1,8 +1,9 @@
+import { Link } from 'gatsby';
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import ContainerSmall from '../components/container/ContainerSmall';
 import GeneralLayout from '../components/layout/GeneralLayout';
-import Button from '../components/ui/Button';
+import ButtonStyle from '../components/ui/ButtonStyle';
 
 const NotFoundPage = () => {
   return (
@@ -18,8 +19,9 @@ const NotFoundPage = () => {
               <br />
               <span className="text-4xl">Żądana strona nie istnieje.</span>
             </h1>
-
-            <Button primary>Powrót</Button>
+            <Link className="inline-block" to="/">
+              <ButtonStyle primary>Powrót</ButtonStyle>
+            </Link>
           </div>
         </ContainerSmall>
       </GeneralLayout>

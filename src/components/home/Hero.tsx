@@ -1,9 +1,9 @@
 import classNames from 'classnames';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 import React from 'react';
 import useHideScrollIndicator from '../../hooks/useHideScrollIndicator';
 import ContainerSmall from '../container/ContainerSmall';
-import Button from '../ui/Button';
+import ButtonStyle from '../ui/ButtonStyle';
 import ScrollDownIndicator from '../ui/ScrollDownIndicator';
 
 type Props = {};
@@ -36,12 +36,18 @@ const Hero: React.FC<Props> = ({}) => {
         <ContainerSmall className="flex items-center h-full">
           <div>
             <h1>
-              <span className="text-5xl md:text-7xl text-dark-gray font-sans font-normal">{title}</span>
+              <span className="text-5xl md:text-7xl text-dark-gray font-sans font-normal">
+                {title}
+              </span>
               <br />
-              <span className="font-serif text-6xl md:text-8xl text-black font-bold">{subtitle}</span>
+              <span className="font-serif text-6xl md:text-8xl text-black font-bold">
+                {subtitle}
+              </span>
             </h1>
             <div className="space-x-4">
-              <Button primary>Zobacz Projekty</Button>
+              <Link to="/projekty">
+                <ButtonStyle primary>Zobacz Projekty</ButtonStyle>
+              </Link>
             </div>
           </div>
         </ContainerSmall>

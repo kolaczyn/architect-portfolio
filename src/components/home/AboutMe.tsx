@@ -1,12 +1,13 @@
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, Link, useStaticQuery } from 'gatsby';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from '@contentful/rich-text-types';
 import React from 'react';
 import ContainerSmall from '../container/ContainerSmall';
 import DebugDiv from '../ui/DebugDiv';
 import Avatar from '../ui/Avatar';
-import Button from '../ui/Button';
+import ButtonStyle from '../ui/ButtonStyle';
 import LocationPin from '../ui/LocationPin';
+import useEmailLink from '../../hooks/useEmailLink';
 
 type Props = {};
 
@@ -34,6 +35,7 @@ const AboutMe: React.FC<Props> = ({}) => {
   `).contentfulAboutMe;
   const content = JSON.parse(raw);
   const avatarSrc = avatar.fluid.src;
+  const emailLink = useEmailLink();
   console.log(avatarSrc);
 
   return (
@@ -46,7 +48,9 @@ const AboutMe: React.FC<Props> = ({}) => {
         <section className="col-span-2 space-y-4">
           <h2>{title}</h2>
           {documentToReactComponents(content)}
-          <Button primary>Kontakt</Button>
+          <a className="inline-block" href={emailLink} target="_blank">
+            <ButtonStyle primary>Kontakt</ButtonStyle>
+          </a>
         </section>
       </div>
     </ContainerSmall>

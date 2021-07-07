@@ -4,7 +4,7 @@ import { BaseProps } from '../../customTypes';
 
 type Props = BaseProps & { primary?: boolean };
 
-const Button: React.FC<Props> = ({
+const ButtonStyle: React.FC<Props> = ({
   className,
   children,
   primary: isPrimary,
@@ -28,8 +28,8 @@ const Button: React.FC<Props> = ({
     </div>
   );
 };
-export default Button;
+export default ButtonStyle;
 
-Button.defaultProps = {
+ButtonStyle.defaultProps = {
   primary: false,
 };

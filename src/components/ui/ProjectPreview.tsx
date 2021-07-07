@@ -2,13 +2,13 @@ import classNames from 'classnames';
 import { Link } from 'gatsby';
 import React from 'react';
 import { BaseProps } from '../../customTypes';
-import Button from './Button';
+import ButtonStyle from './ButtonStyle';
 
 type Props = BaseProps & { src: string; slug: string; title: string };
 
 const ProjectPreview: React.FC<Props> = ({ slug, src, title }) => {
   return (
-    <Link to="/">
+    <Link to="/projekty">
       <div
         style={{ backgroundImage: `url(${src})` }}
         className={classNames(
@@ -28,9 +28,9 @@ const ProjectPreview: React.FC<Props> = ({ slug, src, title }) => {
         >
           <div className="flex flex-col items-center space-y-2">
             <div className="font-bold text-2xl text-dark-gray">{title}</div>
-            <Button primary>
+            <ButtonStyle primary>
               Zobacz Więcej
-            </Button>
+            </ButtonStyle>
           </div>
         </div>
       </div>
