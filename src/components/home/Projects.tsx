@@ -1,9 +1,11 @@
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import React from 'react';
 import ContainerBig from '../container/ContainerBig';
+import ContainerFullOnPhone from '../container/ContainerFullOnPhone';
 import GrayContainer from '../container/GrayContainer';
 import ButtonStyle from '../ui/ButtonStyle';
 import ProjectPreview from '../ui/ProjectPreview';
+import ProjectsTiles from '../ui/ProjectsTiles';
 
 type Props = {};
 
@@ -32,18 +34,8 @@ const Projects: React.FC<Props> = ({}) => {
             </Link>
           </div>
         </header>
-        <ul className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
-          {photos.map(({ title, fluid, id }) => (
-            <li key={id}>
-              <ProjectPreview
-                title={title}
-                slug="some-project"
-                src={fluid.src}
-              />
-            </li>
-          ))}
-        </ul>
       </ContainerBig>
+      <ProjectsTiles photos={photos} />
     </GrayContainer>
   );
 };

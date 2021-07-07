@@ -9,11 +9,9 @@ import Projects from '../components/home/Projects';
 const IndexPage = () => {
   return (
     <GeneralLayout>
-      <div>
         <Hero />
         <AboutMe />
         <Projects />
-      </div>
     </GeneralLayout>
   );
 };
