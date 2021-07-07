@@ -37,7 +37,7 @@ const AboutMe: React.FC<Props> = ({}) => {
   console.log(avatarSrc);
 
   return (
-    <ContainerSmall>
+    <ContainerSmall id="o-mnie" className="py-16">
       <div className="grid grid-cols-1 md:grid-cols-3 space-x-0 md:space-x-8">
         <div className="flex flex-col space-y-4">
           <Avatar className="self-center" src={avatarSrc} />

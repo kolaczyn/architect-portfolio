@@ -1,16 +1,15 @@
 import classNames from 'classnames';
+import React from 'react';
 import { MdClose as CloseIcon, MdMenu as MenuIcon } from 'react-icons/md';
-import { Link } from 'gatsby';
-import React, { useState } from 'react';
 import { BaseProps } from '../../customTypes';
+import useNavbarProperies from '../../hooks/useNavbarProperties';
 import ContainerBig from '../container/ContainerBig';
 import Logo from '../ui/Logo';
 import AppBox from './AppBox';
-import useNavbarProperies from '../../hooks/useNavbarProperties';
+import NavLinks from './NavLinks';
 import Sidebar from './Sidebar';
 
 type Props = BaseProps;
-const links = ['O Mnie', 'Projekty', 'Kontakt'];
 
 const ICON_SIZE = 40;
 
@@ -42,11 +41,7 @@ const Navbar: React.FC<Props> = ({ className, ...rest }) => {
           </button>
           <nav className="hidden md:block font-bold">
             <ul className="flex space-x-6">
-              {links.map(link => (
-                <li key={link}>
-                  <Link to="/">{link}</Link>
-                </li>
-              ))}
+              <NavLinks />
             </ul>
           </nav>
         </ContainerBig>

@@ -3,7 +3,6 @@ import React from 'react';
 import ContainerBig from '../container/ContainerBig';
 import GrayContainer from '../container/GrayContainer';
 import Button from '../ui/Button';
-import DebugDiv from '../ui/DebugDiv';
 import ProjectPreview from '../ui/ProjectPreview';
 
 type Props = {};
@@ -23,7 +22,7 @@ const Projects: React.FC<Props> = ({}) => {
     }
   `).contentfulDummyGallery;
   return (
-    <GrayContainer className="py-20">
+    <GrayContainer id="projekty" className="py-16">
       <ContainerBig>
         <header className="mb-8">
           <div className="flex flex-col items-center space-y-4">

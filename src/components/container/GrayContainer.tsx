@@ -4,9 +4,11 @@ import { BaseProps } from '../../customTypes';
 
 type Props = BaseProps;
 
-const GrayContainer: React.FC<Props> = ({ className, children }) => {
+const GrayContainer: React.FC<Props> = ({ className, children, ...rest }) => {
   return (
-    <div className={classNames('bg-light-gray', className)}>{children}</div>
+    <div className={classNames('bg-light-gray', className)} {...rest}>
+      {children}
+    </div>
   );
 };
 export default GrayContainer;
