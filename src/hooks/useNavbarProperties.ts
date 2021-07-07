@@ -1,17 +1,26 @@
 import { useState, useEffect } from 'react';
 
-const useIsNavbarHidden = () => {
+const useNavbarProperies = () => {
   const [isNavbarHidden, setIsNavbarHidden] = useState(false);
+  const [isSidebarOn, setIsSidebarOn] = useState(false);
   useEffect(() => {
     let previousScrollPosition = window.pageYOffset;
     window.addEventListener('scroll', () => {
       previousScrollPosition < window.pageYOffset
-        ? setIsNavbarHidden(true)
+      // I don't know why I made this so complicated, but it looks cool
+        ? (() => {
+            setIsNavbarHidden(true);
+            setIsSidebarOn(false);
+          })()
         : setIsNavbarHidden(false);
       previousScrollPosition = window.pageYOffset;
     });
   }, []);
-  return isNavbarHidden;
+  return {
+    isNavbarHidden,
+    isSidebarOn,
+    setIsSidebarOn,
+  };
 };
 
-export default useIsNavbarHidden;
+export default useNavbarProperies;
