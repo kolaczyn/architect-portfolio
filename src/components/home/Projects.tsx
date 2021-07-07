@@ -14,6 +14,7 @@ const Projects: React.FC<Props> = ({}) => {
       contentfulDummyGallery {
         photos {
           title
+          id
           fluid(maxWidth: 650) {
             src
           }
@@ -30,11 +31,17 @@ const Projects: React.FC<Props> = ({}) => {
             <Button>Zobacz Wszystkie</Button>
           </div>
         </header>
-        <div className="grid grid-cols-3 gap-8">
-          {photos.map(({ title, fluid }) => (
-            <ProjectPreview title={title} slug="some-project" src={fluid.src} />
+        <ul className="grid grid-cols-3 gap-8">
+          {photos.map(({ title, fluid, id }) => (
+            <li key={id}>
+              <ProjectPreview
+                title={title}
+                slug="some-project"
+                src={fluid.src}
+              />
+            </li>
           ))}
-        </div>
+        </ul>
       </ContainerBig>
     </GrayContainer>
   );
