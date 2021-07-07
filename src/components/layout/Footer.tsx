@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import React from 'react';
 import { BaseProps } from '../../customTypes';
 import ContainerBig from '../container/ContainerBig';

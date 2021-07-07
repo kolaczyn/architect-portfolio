@@ -36,9 +36,9 @@ const Hero: React.FC<Props> = ({}) => {
         <ContainerSmall className="flex items-center h-full">
           <div>
             <h1>
-              <span className="font-bold text-7xl text-dark-gray">{title}</span>
+              <span className="text-7xl text-dark-gray font-sans font-normal">{title}</span>
               <br />
-              <span className="font-serif text-8xl">{subtitle}</span>
+              <span className="font-serif text-8xl text-black font-bold">{subtitle}</span>
             </h1>
             <div className="space-x-4">
               <Button primary>Zobacz Projekty</Button>

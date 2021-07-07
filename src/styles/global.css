@@ -2,11 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
-  @apply text-lg;
+html,
+body {
+  @apply text-xl;
 
   @apply text-black;
   @apply bg-white;
 
+
   scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-serif;
+  @apply font-medium;
+  @apply text-dark-gray;
+}
+
+h1 {
+  @apply text-6xl;
+}
+h2 {
+  @apply text-5xl;
+}
+h3 {
+  @apply text-4xl;
+}
+h4 {
+  @apply text-3xl;
+}
+h5 {
+  @apply text-2xl;
+}
+h6 {
+  @apply text-xl;
 }

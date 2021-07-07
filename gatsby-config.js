@@ -16,7 +16,7 @@ module.exports = {
       options: {
         fonts: [
           'Lato\:400 700',
-          'Alegreya\:700'
+          'Alegreya\:500 700'
         ]
       }
     },
