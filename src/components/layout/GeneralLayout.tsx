@@ -3,9 +3,9 @@ import { Helmet } from 'react-helmet';
 import Footer from './Footer';
 import Navbar from './Navbar';
 
-type Props = {};
+type Props = { hideFooter?: boolean };
 
-const GeneralLayout: React.FC<Props> = ({ children }) => {
+const GeneralLayout: React.FC<Props> = ({ hideFooter, children }) => {
   return (
     <>
       <Helmet>
@@ -14,9 +14,13 @@ const GeneralLayout: React.FC<Props> = ({ children }) => {
       <div className="min-h-screen flex flex-col">
         <Navbar />
         <main className="flex-1">{children}</main>
-        <Footer />
+        {hideFooter ? null : <Footer />}
       </div>
     </>
   );
 };
 export default GeneralLayout;
+
+GeneralLayout.defaultProps = {
+  hideFooter: false,
+};

@@ -36,7 +36,6 @@ const AboutMe: React.FC<Props> = ({}) => {
   const content = JSON.parse(raw);
   const avatarSrc = avatar.fluid.src;
   const emailLink = useEmailLink();
-  console.log(avatarSrc);
 
   return (
     <ContainerSmall id="o-mnie" className="py-16">

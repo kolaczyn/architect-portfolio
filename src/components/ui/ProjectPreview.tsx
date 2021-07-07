@@ -8,7 +8,7 @@ type Props = BaseProps & { src: string; slug: string; title: string };
 
 const ProjectPreview: React.FC<Props> = ({ slug, src, title }) => {
   return (
-    <Link to="/projekty">
+    <Link to="/konkretny-projekt">
       <div
         style={{ backgroundImage: `url(${src})` }}
         className={classNames(
