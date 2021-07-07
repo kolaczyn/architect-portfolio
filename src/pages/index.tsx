@@ -14,8 +14,10 @@ const IndexPage = () => {
       </Helmet>
       <GeneralLayout>
         <Hero />
+        <div className="space-y-16">
         <AboutMe />
         <Projects />
+        </div>
       </GeneralLayout>
     </>
   );
