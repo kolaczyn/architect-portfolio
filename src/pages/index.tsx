@@ -13,10 +13,10 @@ const IndexPage = () => {
         <title>Marta Krawczyk</title>
       </Helmet>
       <GeneralLayout>
-        <Hero />
         <div className="space-y-16">
-        <AboutMe />
-        <Projects />
+          <Hero />
+          <AboutMe />
+          <Projects />
         </div>
       </GeneralLayout>
     </>
