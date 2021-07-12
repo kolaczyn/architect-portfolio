@@ -12,9 +12,18 @@ const useHideScrollIndicator = () => {
     useState(false);
   useEffect(() => {
     try {
-      window.addEventListener('scroll', e => {
-        setShouldHideScrollIndicator(getRatio() > 0.65);
-      });
+      function onScroll() {
+        setShouldHideScrollIndicator((old) => old ? true : getRatio() > 0.65);
+      }
+      window.addEventListener('scroll', onScroll);
+      return () => {
+        window.removeEventListener('scroll', onScroll);
+      };
+
+    // try {
+    //   window.addEventListener('scroll', e => {
+    //     setShouldHideScrollIndicator(getRatio() > 0.65);
+    //   });
     } catch (ex) {}
   }, []);
 
