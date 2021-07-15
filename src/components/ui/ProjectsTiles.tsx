@@ -12,7 +12,11 @@ const ProjectsTiles: React.FC<Props> = ({ photos }) => {
       <ul className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
         {photos.map(({ title, fluid, id }) => (
           <li key={id}>
-            <ProjectPreview title={title} slug="some-project" src={fluid.src} />
+            <ProjectPreview
+              title={title}
+              slug="some-project"
+              src={`https:${fluid.src}`}
+            />
           </li>
         ))}
       </ul>

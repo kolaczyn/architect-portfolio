@@ -29,7 +29,7 @@ const Hero: React.FC<Props> = ({}) => {
     <div className="min-h-screen">
       <div
         className="h-full absolute top-0 left-0 right-0 bg-center bg-cover"
-        style={{ backgroundImage: `url(${bgImgSrc})` }}
+        style={{ backgroundImage: `url(https:${bgImgSrc})` }}
       >
         <ContainerSmall className="flex items-center h-full">
           <div className="transform -translate-y-1/4">

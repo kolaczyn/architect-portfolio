@@ -14,17 +14,20 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
-        fonts: [
-          'Lato\:400 700',
-          'Alegreya\:500 700'
-        ]
-      }
+        fonts: ['Lato:400 700', 'Alegreya:500 700'],
+      },
     },
     {
       resolve: 'gatsby-source-contentful',
       options: {
         accessToken: contentfulAccessToken,
         spaceId: contentfulSpaceId,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-html-attributes',
+      options: {
+        lang: 'pl',
       },
     },
     'gatsby-plugin-postcss',

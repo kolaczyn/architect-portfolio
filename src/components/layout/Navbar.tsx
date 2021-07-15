@@ -30,6 +30,7 @@ const Navbar: React.FC<Props> = ({ className, ...rest }) => {
         >
           <Logo />
           <button
+            aria-label={isNavbarHidden ? 'Show Navbar' : 'Hide Navbar'}
             className="block md:hidden"
             onClick={() => setIsSidebarOn(old => !old)}
           >

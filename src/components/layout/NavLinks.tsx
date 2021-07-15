@@ -15,7 +15,7 @@ const NavLinks: React.FC<Props> = ({}) => {
         <Link to="/projekty">Projekty</Link>
       </li>
       <li>
-        <a href={emailLink} target="_blank">
+        <a href={emailLink} target="_blank" rel="noopener">
           Kontakt
         </a>
       </li>

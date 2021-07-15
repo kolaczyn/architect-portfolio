@@ -15,6 +15,7 @@ const Footer: React.FC<Props> = ({ className, ...rest }) => {
             href="https://kolaczyn.com"
             target="_blank"
             className="hover:underline"
+            rel="noopener"
           >
             www.kolaczyn.com
           </a>

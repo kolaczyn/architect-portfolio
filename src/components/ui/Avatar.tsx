@@ -8,7 +8,7 @@ type Props = {
 
 const Avatar: React.FC<Props> = ({ src, className }) => {
   return (
-    <img className={classNames('rounded-full shadow', className)} src={src} />
+    <img alt="Avatar" className={classNames('rounded-full shadow', className)} src={`https:${src}`} />
   );
 };
 export default Avatar;
