@@ -1,12 +1,13 @@
 import { Link } from 'gatsby';
-import React from 'react'
+import React from 'react';
 
-type Props = {
-}
+type Props = {};
 
 const Logo: React.FC<Props> = ({}) => {
-    return (
-      <Link className="font-bold text-2xl sm:text-3xl" to="/">atramentoowa</Link>
-    );
-}
-export default Logo
+  return (
+    <Link className="font-bold text-2xl sm:text-3xl" to="/">
+      Anna Kowalska
+    </Link>
+  );
+};
+export default Logo;

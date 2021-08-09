@@ -19,8 +19,9 @@ const ScrollDownIndicator: React.FC<Props> = ({
       onClick={handleClick}
       className={classNames(
         'flex items-center space-x-2 px-4 py-2 cursor-pointer',
-        'transition transform duration-200 ease-in hover:scale-110',
+        'transition transform duration-300 ease-in hover:scale-110',
         'bg-white bg-opacity-0 hover:bg-opacity-10',
+        'text-gray-600 hover:text-black',
         shouldHideScrollIndicator ? 'opacity-0' : 'opacity-100',
         className
       )}
