@@ -9,7 +9,7 @@ const NotFoundPage = () => {
   return (
     <>
       <Helmet>
-        <title>Błąd 404 | Marta Krawczyk</title>
+        <title>Błąd 404 | Architektura</title>
       </Helmet>
       <GeneralLayout>
         <ContainerSmall className="min-h-screen font-sans flex items-center">

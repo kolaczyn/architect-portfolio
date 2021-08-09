@@ -1,8 +1,8 @@
 {
-  "name": "marta-portfolio",
+  "name": "architects-portfolio",
   "version": "1.0.0",
   "private": true,
-  "description": "Marta Portfolio",
+  "description": "Architects's Portfolio",
   "author": "Paweł Kołaczyński",
   "keywords": [
     "gatsby"

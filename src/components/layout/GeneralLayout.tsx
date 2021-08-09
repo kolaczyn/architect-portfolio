@@ -14,11 +14,11 @@ const GeneralLayout: React.FC<Props> = ({ hideFooter, children }) => {
       }
     }
   `).contentfulDescription;
-  console.log(description)
+  console.log(description);
   return (
     <>
       <Helmet>
-        <title>Marta Krawczyk</title>
+        <title>Architektura</title>
         <meta charSet="utf-8" />
         <meta name="description" content={description} />
       </Helmet>

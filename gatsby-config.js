@@ -8,7 +8,7 @@ const {
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://www.yourdomain.tld',
-    title: 'Marta Portfolio',
+    title: 'Architektura',
   },
   plugins: [
     {

@@ -1,4 +1,4 @@
-# Marta Portfolio
+# A portfolio for an architect
 
 ## TODO
 
